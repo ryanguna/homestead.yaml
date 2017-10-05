@@ -1,0 +1,39 @@
+ip: "192.168.10.10"
+memory: 2048
+cpus: 1
+provider: virtualbox
+
+authorize: C:/Users/Admin/.ssh/id_rsa.pub
+
+keys:
+    - C:/Users/Admin/.ssh/id_rsa
+
+folders:
+    - map: C:/Users/Admin/Desktop/www/sites
+      to: /home/vagrant/sites
+      type: nfs
+
+sites: 
+  - map: test.dev
+    to: /home/vagrant/sites/ews/test/public
+
+    
+databases:
+    - homestead
+
+
+
+
+
+# blackfire:
+#     - id: foo
+#       token: bar
+#       client-id: foo
+#       client-token: bar
+
+# ports:
+#     - send: 50000
+#       to: 5000
+#     - send: 7777
+#       to: 777
+#       protocol: udp
